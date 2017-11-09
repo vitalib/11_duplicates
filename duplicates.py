@@ -5,7 +5,7 @@ import os
 
 def get_all_files(dirpath):
     files_dict = collections.defaultdict(set)
-    FileInfo = collections.namedtuple(
+    file_info = collections.namedtuple(
         'FileInfo',
         ('file_name', 'file_size'),
     )
@@ -15,7 +15,7 @@ def get_all_files(dirpath):
                 file_path = os.path.join(dir_name, file_name)
                 file_abs_path = os.path.abspath(file_path)
                 file_size = os.path.getsize(file_path)
-                files_dict[FileInfo(file_name, file_size)].add(file_abs_path)
+                files_dict[file_info(file_name, file_size)].add(file_abs_path)
             except FileNotFoundError:
                 pass
     return files_dict
