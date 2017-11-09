@@ -1,6 +1,20 @@
 # Anti-Duplicator
 
-[TODO. There will be project description]
+Searches recursively files with the same name and size from the given
+directory.
+
+# Quick Start
+
+Script should be callable by Python 3.5.
+
+Example on Linux.
+```bash
+python3 duplicates.py <dirpath> 
+
+Duplicates found:
+/home/New/New1/myfile.txt
+/home/New/myfile.txt
+```
 
 # Project Goals
 
